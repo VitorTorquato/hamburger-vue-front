@@ -1,11 +1,13 @@
 <script setup>
-import HomeView from './views/HomeView.vue';
-
+  import HeaderApp from '@/components/Header/HeaderApp.vue'
+  import FooterApp from '@/components/Footer/FooterApp.vue'
 </script>
 
 <template>
   <div>
-    <HomeView/>
+    <HeaderApp/>
+    <routerView/>
+    <FooterApp/>
   </div>
 </template>
 
