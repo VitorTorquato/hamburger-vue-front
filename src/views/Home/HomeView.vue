@@ -1,7 +1,14 @@
-<script setup>
-
+<script >
+  import Banner from '@/components/Banner/Banner.vue';
+  export default{
+    components:{
+      Banner
+    }
+  }
 </script>
 
 <template>
-  <div class="main_container"><h1>Hello World</h1></div>
+  
+    <Banner/>
+  <main class="main_container"><p>Formulario</p></main>
 </template>
