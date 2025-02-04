@@ -22,4 +22,8 @@
     min-height: calc(100dvh - 139px);
     margin: 0 auto;
   }
+
+  h1{
+    margin-top: 36px;
+  }
 </style>

@@ -79,30 +79,24 @@
   ],
   "burgers": [
     {
-      "id": "d43b",
-      "name": "Vitor Torquato de Sousa",
-      "meat": "meat.type",
+      "id": "3b8a",
+      "name": "leticia",
+      "meat": "Veggie burger",
+      "bread": "3 Formmagi",
+      "options": [
+        "Onion",
+        "Tomate"
+      ],
+      "status": "Requested"
+    },
+    {
+      "id": "183d",
+      "name": "vitor",
+      "meat": "Round",
+      "bread": "Parmesão",
       "options": [
         "Bacon",
         "Cheddar"
-      ],
-      "status": "Requested"
-    },
-    {
-      "id": "d8d6",
-      "name": "Vitor Torquato de Sousa",
-      "meat": "meat.type",
-      "options": [
-        "Cheddar"
-      ],
-      "status": "Requested"
-    },
-    {
-      "id": "064d",
-      "name": "leticia",
-      "meat": "meat.type",
-      "options": [
-        "Picles"
       ],
       "status": "Requested"
     }
