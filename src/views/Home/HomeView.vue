@@ -14,6 +14,7 @@
   
     <Banner/>
   <main class="main_container">
+    <h1 class="title">Make your burguer</h1>
     <BurguerForm />
   </main>
 </template>
@@ -23,5 +24,9 @@
       width: 100%;
       max-width: 1400px;
       margin: 0 auto;
+    }
+    
+    .title{
+      margin-top: 36px;
     }
 </style>

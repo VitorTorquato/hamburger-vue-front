@@ -1,83 +1,110 @@
 {
-    "ingredientes": {
-      "breads": [
-        {
-          "id": 1,
-          "type": "Italian Bread"
-        },
-        {
-          "id": 2,
-          "type": "3 Formmagi"
-        },
-        {
-          "id": 3,
-          "type": "Parmesão"
-        },
-        {
-          "id": 4,
-          "type": "Integral"
-        }
-      ],
-      "meats": [
-        {
-          "id": 1,
-          "type": "Round"
-        },
-        {
-          "id": 2,
-          "type": "Sirloin"
-        },
-        {
-          "id": 3,
-          "type": "Picanha"
-        },
-        {
-          "id": 4,
-          "type": "Veggie burger"
-        }
-      ],
-      "options": [
-        {
-          "id": 1,
-          "type": "Bacon"
-        },
-        {
-          "id": 2,
-          "type": "Cheddar"
-        },
-        {
-          "id": 3,
-          "type": "Salame"
-        },
-        {
-          "id": 4,
-          "type": "Tomate"
-        },
-        {
-          "id": 4,
-          "type": "Onion"
-        },
-        {
-          "id": 4,
-          "type": "Picles"
-        }
-      ]
-    },
-    "status": [
+  "ingredientes": {
+    "breads": [
       {
         "id": 1,
-        "type": "Requested"
+        "type": "Italian Bread"
       },
       {
         "id": 2,
-        "type": "Preparing"
+        "type": "3 Formmagi"
       },
       {
         "id": 3,
-        "type": "Ready"
+        "type": "Parmesão"
+      },
+      {
+        "id": 4,
+        "type": "Integral"
       }
     ],
-    "burgers": [
-     
+    "meats": [
+      {
+        "id": 1,
+        "type": "Round"
+      },
+      {
+        "id": 2,
+        "type": "Sirloin"
+      },
+      {
+        "id": 3,
+        "type": "Picanha"
+      },
+      {
+        "id": 4,
+        "type": "Veggie burger"
+      }
+    ],
+    "options": [
+      {
+        "id": 1,
+        "type": "Bacon"
+      },
+      {
+        "id": 2,
+        "type": "Cheddar"
+      },
+      {
+        "id": 3,
+        "type": "Salame"
+      },
+      {
+        "id": 4,
+        "type": "Tomate"
+      },
+      {
+        "id": 4,
+        "type": "Onion"
+      },
+      {
+        "id": 4,
+        "type": "Picles"
+      }
     ]
-  }
+  },
+  "status": [
+    {
+      "id": "1",
+      "type": "Requested"
+    },
+    {
+      "id": "2",
+      "type": "Preparing"
+    },
+    {
+      "id": "3",
+      "type": "Ready"
+    }
+  ],
+  "burgers": [
+    {
+      "id": "d43b",
+      "name": "Vitor Torquato de Sousa",
+      "meat": "meat.type",
+      "options": [
+        "Bacon",
+        "Cheddar"
+      ],
+      "status": "Requested"
+    },
+    {
+      "id": "d8d6",
+      "name": "Vitor Torquato de Sousa",
+      "meat": "meat.type",
+      "options": [
+        "Cheddar"
+      ],
+      "status": "Requested"
+    },
+    {
+      "id": "064d",
+      "name": "leticia",
+      "meat": "meat.type",
+      "options": [
+        "Picles"
+      ],
+      "status": "Requested"
+    }
+  ]
+}

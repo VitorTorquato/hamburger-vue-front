@@ -1,9 +1,9 @@
 <template>
     <div>
-        <p>Componente de menssagem</p>
+            <Message :msg="msg" v-show="msg"/>
 
         <div>
-            <form id="burger_form">
+            <form id="burger_form" @submit="createBurguer($event)">
                 <div class="input_container">
                     <label for="name">Name</label>
                     <input type="text" id="name" name="name" v-model="name" placeholder="Type your full name">
@@ -42,7 +42,12 @@
 </template>
 
 <script>
+    import Message from '../Message/Message.vue';
+
     export default{
+        components:{
+            Message
+        },
         name:'BurgerForm',
         data(){
             return{
@@ -53,7 +58,6 @@
                 brad:null,
                 meat:null,
                 options:[],
-                status: 'Requested',
                 msg:null,
 
             }
@@ -67,7 +71,41 @@
                 this.breads = data.breads;
                 this.meats = data.meats;
                 this.optiondata = data.options;
+            },
+            async createBurguer(e){
+                e.preventDefault()
+
+                const data = {
+                    name: this.name,
+                    meat: this.meat,
+                    bread:this.bread,
+                    options: Array.from(this.options),
+                    status: "Requested"
+                }
+
+                const dataJson = JSON.stringify(data);
+
+                const req = await fetch("http://localhost:3000/burgers" ,{
+                    method: 'POST',
+                    headers: {"Content-Type" : "apllication/json"},
+                    body: dataJson
+                });
+
+                const res = await req.json();
+
+                this.msg =`Order created succesfully`
+
+                //cleaning the message
+                setTimeout(() => this.msg = "" , 3000)
+
+                this.name = '';
+                this.meat = '';
+                this.bread = '';
+                this.options = '';
+
+
             }
+
         },
         mounted(){
             this.getIngredients();
