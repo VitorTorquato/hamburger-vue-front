@@ -10,10 +10,10 @@
                 </div>
 
                 <div class="input_container">
-                    <label for="bread">Select your bread</label>
-                    <select type="select" name="bread" id="bread" v-model="bread">
+                    <label for="breads">Select your bread</label>
+                    <select type="select" name="breads" id="breads" v-model="breads">
                         <option value="">Select one bread</option>
-                        <option value="brioche">Brioche</option>
+                        <option v-for="bread in breads" :key="bread.id" value="bread.tipo">{{ bread.type }}</option>
                     </select>
                 </div>
 
@@ -21,15 +21,15 @@
                     <label for="meat">Select your meat</label>
                     <select type="select" name="meat" id="meat" v-model="meat">
                         <option value="">Select one meat</option>
-                        <option value="picanha">Picanha</option>
+                        <option v-for="meat in meats" :key="meat.id" value="meat.type">{{ meat.type }}</option>
                     </select>
                 </div>
 
                 <div id="opcionais-container" class="input_container">
-                    <label id="opcionais-title" for="opcionais">Select your extra</label>
-                    <div class="checkbox-container">
-                        <input type="checkbox" name="opcionais" v-model="opcionais" value="salame">
-                        <span>Salame</span>
+                    <label id="opcionais-title" for="options">Select your extra</label>
+                    <div class="checkbox-container" v-for="option in optiondata" :key="option.id">
+                        <input type="checkbox" name="options" v-model="options" :value="option.type">
+                        <span>{{ option.type }}</span>
                     </div>
                 </div>
 
@@ -43,7 +43,35 @@
 
 <script>
     export default{
-        name:'BurgerForm'
+        name:'BurgerForm',
+        data(){
+            return{
+                breads:null,
+                meats: null,
+                optiondata:null,
+                name:null,
+                brad:null,
+                meat:null,
+                options:[],
+                status: 'Requested',
+                msg:null,
+
+            }
+        },
+        methods:{
+            async getIngredients(){
+                const req = await fetch("http://localhost:3000/ingredientes");
+                const data = await req.json();
+
+                //console.log(data);
+                this.breads = data.breads;
+                this.meats = data.meats;
+                this.optiondata = data.options;
+            }
+        },
+        mounted(){
+            this.getIngredients();
+        }
     }
 </script>
 

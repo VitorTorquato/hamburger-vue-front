@@ -1,0 +1,83 @@
+{
+    "ingredientes": {
+      "breads": [
+        {
+          "id": 1,
+          "type": "Italian Bread"
+        },
+        {
+          "id": 2,
+          "type": "3 Formmagi"
+        },
+        {
+          "id": 3,
+          "type": "Parmesão"
+        },
+        {
+          "id": 4,
+          "type": "Integral"
+        }
+      ],
+      "meats": [
+        {
+          "id": 1,
+          "type": "Round"
+        },
+        {
+          "id": 2,
+          "type": "Sirloin"
+        },
+        {
+          "id": 3,
+          "type": "Picanha"
+        },
+        {
+          "id": 4,
+          "type": "Veggie burger"
+        }
+      ],
+      "options": [
+        {
+          "id": 1,
+          "type": "Bacon"
+        },
+        {
+          "id": 2,
+          "type": "Cheddar"
+        },
+        {
+          "id": 3,
+          "type": "Salame"
+        },
+        {
+          "id": 4,
+          "type": "Tomate"
+        },
+        {
+          "id": 4,
+          "type": "Onion"
+        },
+        {
+          "id": 4,
+          "type": "Picles"
+        }
+      ]
+    },
+    "status": [
+      {
+        "id": 1,
+        "type": "Requested"
+      },
+      {
+        "id": 2,
+        "type": "Preparing"
+      },
+      {
+        "id": 3,
+        "type": "Ready"
+      }
+    ],
+    "burgers": [
+     
+    ]
+  }
