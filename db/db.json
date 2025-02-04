@@ -88,17 +88,6 @@
         "Tomate"
       ],
       "status": "Preparing"
-    },
-    {
-      "id": "183d",
-      "name": "vitor",
-      "meat": "Round",
-      "bread": "Parmesão",
-      "options": [
-        "Bacon",
-        "Cheddar"
-      ],
-      "status": "Requested"
     }
   ]
 }

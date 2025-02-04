@@ -1,11 +1,17 @@
 <script>
+
+    import Message from '../Message/Message.vue';
     export default{
+        components:{
+            Message
+        },
         name:'Dashboard',
         data(){
             return{
                 burgers: null,
                 burger_id:null,
-                status:[]
+                status:[],
+                msg:null
             }
         },
         methods:{
@@ -29,6 +35,10 @@
                     method: "DELETE"
                 });
 
+                this.msg =`Order deletead succesfully`
+
+                //cleaning the message
+                setTimeout(() => this.msg = "" , 3000)
 
                 const res = await req.json();
 
@@ -60,6 +70,7 @@
 </script>
 
 <template>
+    <Message :msg="msg" v-show="msg"/>
    <div id="burger-table">
     <div>
       <div id="burger-table-heading">
